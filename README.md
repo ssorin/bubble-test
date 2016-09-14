@@ -33,3 +33,4 @@ Usage
 * /shop/create ==> Creation d'un shop 
 * /shop/get/[id] ==> detail d'un shop (JSON)
 * /shop/Set/[id] ==> mise à jour d'un shop
+
