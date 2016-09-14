@@ -1,0 +1,22 @@
+{% extends "SorinShopBundle:Shop:base.html.twig" %}
+
+
+{% block shop_content %}
+
+    <div class="list-group">
+
+    {% for shop in shops %}
+        <a href="{{ path('sorin_shop_get', {'id': shop.id}) }}" class="list-group-item">
+
+            <p>
+                <strong>{{ shop.name|upper }}</strong>
+                <br /><br />
+                {{ shop.adress }}
+            </p>
+        </a>
+    {% else %}
+        <div style="clear: both; margin-top: 40px"></div>
+        <p>Aucune boutique ...</p>
+    {% endfor %}
+    </div>
+{% endblock %}

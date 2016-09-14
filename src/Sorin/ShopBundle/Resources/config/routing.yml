@@ -1,0 +1,19 @@
+sorin_shop_list:
+    path:     /
+    defaults: { _controller: SorinShopBundle:Shop:list }
+
+sorin_shop_get:
+    path:      /get/{id}
+    defaults:  { _controller: SorinShopBundle:Shop:get }
+    requirements:
+        slug: d+
+
+sorin_shop_create:
+    path:      /create
+    defaults:  { _controller: SorinShopBundle:Shop:create }
+
+sorin_shop_set:
+    path:      /set/{id}
+    defaults:  { _controller: SorinShopBundle:Shop:set }
+    requirements:
+        slug: \d

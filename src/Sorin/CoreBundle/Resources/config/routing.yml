@@ -1,0 +1,3 @@
+sorin_core_homepage:
+    path:     /
+    defaults: { _controller: SorinCoreBundle:Core:index }

@@ -1,0 +1,12 @@
+# locale Apps
+application_core:
+    resource: "@SorinCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+sorin_shop:
+    resource: "@SorinShopBundle/Resources/config/routing.yml"
+    prefix:   /shop
+
+#app:
+#    resource: @AppBundle/Controller/
+#    type:     annotation

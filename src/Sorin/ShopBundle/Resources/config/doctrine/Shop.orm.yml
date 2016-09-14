@@ -1,0 +1,35 @@
+Sorin\ShopBundle\Entity\Shop:
+    type: entity
+    table: null
+    repositoryClass: Sorin\ShopBundle\Entity\ShopRepository
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: name
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            unique: true
+            nullable: true
+        adress:
+            type: string
+            length: 255
+#    properties:
+#        name:
+#            - Name: ~
+#            - NotNull: ~
+#            - Length:
+#                min: 3
+#                max: 255
+#        adress:
+#            - NotNull: ~
+#            - Length:
+#                min: 3
+#                max: 255
+
+    lifecycleCallbacks: {  }
