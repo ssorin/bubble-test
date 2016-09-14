@@ -28,7 +28,8 @@ class ShopType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Sorin\ShopBundle\Entity\Shop'
+            'data_class' => 'Sorin\ShopBundle\Entity\Shop',
+            'csrf_protection' => false,
         ));
     }
 
@@ -39,4 +40,6 @@ class ShopType extends AbstractType
     {
         return 'sorin_shopbundle_shop';
     }
+
+
 }
