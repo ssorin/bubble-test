@@ -96,11 +96,6 @@ class ShopController extends Controller
             $name = $request->request->get('name', null);
             $adress = $request->request->get('adress', null);
 
-            $data = array(
-                'name' => $request->request->get('name', null),
-                'adress' => $request->request->get('adress', null),
-            );
-
 
             // Validation...
             if (empty($name)) {
@@ -133,8 +128,9 @@ class ShopController extends Controller
 
             return new JsonResponse(
                 array(
-                    'name' => $name,
-                    'adress' => $adress,
+                    'id' => $shop->getId(),
+                    'name' => $shop->getName(),
+                    'adress' => $shop->getAdress()
                 )
             );
         } else {
@@ -196,8 +192,8 @@ class ShopController extends Controller
 
             return new JsonResponse(
                 array(
-                    'name' => $name,
-                    'adress' => $adress,
+                    'name' => $shop->getName(),
+                    'adress' => $shop->getAdress()
                 )
             );
         } else {
